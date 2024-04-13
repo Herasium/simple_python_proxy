@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import base64
 import requests
 
-app = Flask(__name__)
+app = Flask("app")
 
 @app.route('/<path:encoded_url>', methods=['GET'])
 def proxy(encoded_url):
